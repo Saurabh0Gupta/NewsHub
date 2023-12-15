@@ -7,7 +7,7 @@
 // })
 
 var typed = new Typed('.text', {
-    strings: ["Front-end developer","Bac-kend developer","java developer","WordPress developer"],
+    strings: ["Front-end developer","Back-end developer","java developer","WordPress developer"],
     typeSpeed: 70,
     backSpeed:70,
     backDelay:1000,
