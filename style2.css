@@ -58,8 +58,12 @@
     }
 
     .my-skill-icon{
-        width: 100vh;
-        height: 70px;
+        width: 12vw;
+        height: 12vw;
+        /* border-radius: 50%; */
+    }
+    .my-skill-icon img{
+        margin: 3px;
     }
     #center{
         position: relative;
