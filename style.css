@@ -12,6 +12,7 @@ html{
 {
 width: 100%;
 height: 100%;
+overflow-x: hidden;
 }
 @font-face {
     font-family: PP;
@@ -329,9 +330,10 @@ body {
     animation-iteration-count: infinite;
     animation-duration: 15s;
     animation-timing-function: linear;
+    white-space: nowrap;
 }
 .my-skill-icon{
-    padding: 10px;
+    padding: .4vmax;
     white-space: nowrap;
     display: inline-block;
     width: 12vmax;
@@ -341,6 +343,7 @@ body {
     /* background-color: blue; */
     border-radius: 1em;
     overflow: hidden;
+    align-items: center;
 }
 .aur{
     display: flex;
@@ -538,7 +541,7 @@ a{
 #contact-right h3{
     font-size: 3vmax;
 }
-#form{
+form{
     margin-top: 4vh;
     display: flex;
     align-items: center;
@@ -567,4 +570,7 @@ textarea{
     padding-left: 10px;
     border-radius: 10px;
     border: none;
+}
+#top::-webkit-scrollbar{
+    display: none;
 }

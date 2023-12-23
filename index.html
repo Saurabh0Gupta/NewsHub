@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Saurabh's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="./pf icon.png" type="image/x-icon">
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -83,9 +84,9 @@
                               <div class="swiper-slide">
                                 <h2>Experience</h2>
                                 <ul>
-                                    <li><span>2023 - current</span><br>UI/UX Design Training at Sheryians Coding School</li>
-                                    <li><span>2023 - current</span><br>UI/UX Design Training at Sheryians Coding School</li>
-                                    <li><span>2023 - current</span><br>UI/UX Design Training at Sheryians Coding School</li>
+                                    <li><span>UI/UX</span><br>UI/UX Design Training at Sheryians Coding School</li>
+                                    <li><span>MERN</span><br>Cloned website in MERN Tech Stack</li>
+                                    <li><span>Programming</span><br>Basic Knowledge of core java with OOPS methodology and Knowledge of MYSQL</li>
                                     
                                 </ul>
                               </div>
@@ -140,12 +141,12 @@
                         <img src="react.png" alt="">
                     </div> 
                     <div class="my-skill-icon">
-                        <img src="react.png" alt="">
+                        <img src="sql.png" alt="">
                     </div> 
                     
                 </div> 
             </div>
-            <div class="top-1" id="top-1">
+            <div class="top-1" id="top-2">
                 <div class="aur">
                     <div class="my-skill-icon">
                         <img src="html.png" alt="">
@@ -169,7 +170,7 @@
                         <img src="react.png" alt="">
                     </div> 
                     <div class="my-skill-icon">
-                        <img src="react.png" alt="">
+                        <img src="sql.png" alt="">
                     </div> 
                  
                 </div> 
@@ -183,17 +184,17 @@
                 <div class="in-cen">
                     <h2>MERN stack developer</h2>
                     <p>MERN stack includes MongoDB for database, ExpressJs for framework, ReactJS in forntend and NodeJs for runtime environment</p>
-                    <a href="">Learn more..</a>
+                    <a href="https://en.wikipedia.org/wiki/MEAN_(solution_stack)">Learn more..</a>
                 </div>
                 <div class="in-cen">
                     <h2>core java with oops</h2>
                     <p>Build confidence in OOPS fundamnetal like Abstraction, Encapsulation, Polymorphism, Inheritance with knowledgeof core java</p>
-                    <a href="">Learn more..</a>
+                    <a href="https://en.wikipedia.org/wiki/Java_(programming_language)">Learn more..</a>
                 </div>
                 <div class="in-cen">
                     <h2>WordPress & MYSQL</h2>
                     <p>WordPress is basically a content management system, we cna create our blogs and website without much need of html, css, and javascript its website is responsive and have many plugins available for external features and functionality.</p>
-                    <a href="">Learn more..</a>
+                    <a href="https://en.wikipedia.org/wiki/WordPress">Learn more..</a>
                 </div>
             </div>
         </div>
@@ -257,16 +258,37 @@
         <div id="contact-right">
             <h3>Contact Me @</h3>
             <div id="form">
-                <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your mail">
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-            <input type="submit" >
+            <form name="submit-to-google-sheet" >
+                <input type="text" placeholder="Your Name" name="Name" style="color: #000;">
+                <input type="email" placeholder="Your mail" name="Email" style="color: #000;">
+                <textarea  id="" cols="30" rows="10" placeholder="Your message" name="Message" style="color: #000;"></textarea>
+                <input type="submit" >
+            </form>
+            <span id="msg" style="color: green; margin-left: 50vw;"></span>
             </div>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzq7_646bomXh3yqFriBzideLLuV-x8nmoz-Bh6aEwW87skVd0N3MXjJQA__2avPu4/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg=document.getElementById('msg')
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully ✅",
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },2000)
+                form.reset();
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
     <script src="script.js"></script>
 </body>
 </html>

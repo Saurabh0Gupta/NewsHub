@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    }
+    html,body
+    {
+    width: 100%;
+    height: 100%;
+    }
+    #skill{
+        /* width: 200vw; */
+        height: 300px;
+        background-color: #000;
+        white-space: nowrap;
+    }
+    .inner{
+
+        display: inline-block;
+        width: auto;
+        height: 100%;
+        background-color: red;
+        white-space: nowrap;
+        animation-name: move;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    .elem{
+        display: inline-flex;
+        width: 250px;
+        height: 250px;
+        background-color: royalblue;
+    }
+    @keyframes move {
+        0%{
+            transform: translate(0%);
+        }
+        100%{
+            transform: translate(calc(-100% - 4px));
+        }
+        
+    }
+</style>
+<body>
+    <div id="skill">
+        <div class="inner">
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div style="background-color: #3ad1d9;" class="elem">
+
+            </div>
+        </div>
+        <div class="inner">
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div class="elem">
+
+            </div>
+            <div style="background-color: #a8c81b;" class="elem">
+
+            </div>
+        </div>
+      
+    </div>
+</body>
+</html>
