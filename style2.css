@@ -60,7 +60,7 @@
     .my-skill-icon{
          width: 7vh;
         height: 14vw; 
-        /* border-radius: 50%; */
+        border-radius: 0%;
     }
     .my-skill-icon img{
         margin: 3px;
